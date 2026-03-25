@@ -57,11 +57,7 @@ pip install qutip torch numpy matplotlib scipy
 
 ---
 
-## Usage
 
-```python
-python nn_qst.py
-```
 
 Trains the model, evaluates against baselines, generates plots, and saves the trained model to `qst_model.pt`.
 
