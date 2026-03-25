@@ -45,7 +45,7 @@ Haar-random mixed states generated via the Ginibre ensemble, with simulated mult
 
 - **Hilbert-Schmidt distance**: d_HS(ρ₁, ρ₂) = Tr[(ρ₁ − ρ₂)²]
 - **Fidelity**: F(ρ₁, ρ₂) = (Tr[√(√ρ₁ ρ₂ √ρ₁)])²
-- **Shot-scaling experiment**: mean HS distance vs. measurement budget across all three estimators
+
 
 ---
 
