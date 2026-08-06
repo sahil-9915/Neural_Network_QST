@@ -18,7 +18,7 @@ The network takes a POVM frequency vector as input and predicts the Cholesky par
 - **Hidden layers**: 4, width 512
 - **Loss**: MSE on Cholesky parameters
 - **Optimizer**: Adam with cosine annealing LR schedule
-- **POVM**: Pauli-basis IC-POVM, 6 elements for a qubit (d = 2, the validated case). Higher dimensions fall back to a random informationally-complete POVM, which is experimental and not validated in this repo.
+- **POVM**: Pauli-basis IC-POVM, 6 elements for a qubit. Only d = 2 is supported and validated; higher dimensions are experimental.
 
 ---
 
