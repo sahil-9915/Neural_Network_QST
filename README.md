@@ -18,13 +18,13 @@ The network takes a POVM frequency vector as input and predicts the Cholesky par
 - **Hidden layers**: 4, width 512
 - **Loss**: MSE on Cholesky parameters
 - **Optimizer**: Adam with cosine annealing LR schedule
-- **POVM**: Pauli-basis IC-POVM (6 elements for qubit; SIC-like for higher dimensions)
+- **POVM**: Pauli-basis IC-POVM, 6 elements for a qubit (d = 2, the validated case). Higher dimensions fall back to a random informationally-complete POVM, which is experimental and not validated in this repo.
 
 ---
 
 ## Dataset
 
-Haar-random mixed states generated via the Ginibre ensemble, with simulated multinomial measurement noise.
+Random mixed states from the Ginibre ensemble (Hilbert–Schmidt distributed), with simulated multinomial measurement noise.
 
 | Split      | Samples | Shots |
 |------------|---------|-------|
@@ -46,7 +46,6 @@ Haar-random mixed states generated via the Ginibre ensemble, with simulated mult
 - **Hilbert-Schmidt distance**: d_HS(ρ₁, ρ₂) = Tr[(ρ₁ − ρ₂)²]
 - **Fidelity**: F(ρ₁, ρ₂) = (Tr[√(√ρ₁ ρ₂ √ρ₁)])²
 
-
 ---
 
 ## Requirements
@@ -57,9 +56,9 @@ pip install qutip torch numpy matplotlib scipy
 
 ---
 
+## Usage
 
-
-Trains the model, evaluates against baselines, generates plots, and saves the trained model to `qst_model.pt`.
+Run the notebook `Neural-Network Quantum State Tomography.ipynb` from top to bottom. It trains the model, evaluates against the baselines, generates the plots, and saves the trained model to `qst_model.pt`.
 
 ---
 
